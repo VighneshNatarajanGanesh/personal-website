@@ -13,8 +13,7 @@ $(document).ready(function() {
   $(function() {
     $('body').vegas({
         slides: [
-            { src: 'images/slides/slide-1.jpg' },
-            { src: 'images/slides/slide-2.jfif' }
+            { src: 'images/slides/slide-1.png' }
         ],
         timer: false,
         transition: [ 'zoomOut', ]
