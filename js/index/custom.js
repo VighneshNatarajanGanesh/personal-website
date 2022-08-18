@@ -13,7 +13,8 @@ $(document).ready(function() {
   $(function() {
     $('body').vegas({
         slides: [
-            { src: 'images/slides/slide-1.png' }
+            { src: 'images/slides/nebula.jpg' }
+
         ],
         timer: false,
         transition: [ 'zoomOut', ]
