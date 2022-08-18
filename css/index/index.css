@@ -267,6 +267,10 @@ footer {
   color: #000;
 }
 
+footer h1 {
+  color: #ccc;
+}
+
 /* footer section  */
 footer {
   background: #111112;
