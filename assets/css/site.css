@@ -183,13 +183,33 @@ html:not(.js) .loader { display: none; }
 .hero-hint { display: inline-flex; align-items: center; gap: 10px; font-size: .8125rem; color: var(--frost); font-stretch: 95%; padding: 9px 14px; border-radius: 999px; background: rgba(13, 27, 46, .62); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: inset 0 0 0 1px rgba(169,180,196,.14); margin-bottom: 4px; }
 .hint-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--livery); box-shadow: 0 0 0 0 rgba(243,215,10,.6); animation: ping 2s infinite; }
 @keyframes ping { 0% { box-shadow: 0 0 0 0 rgba(243,215,10,.55); } 80%, 100% { box-shadow: 0 0 0 12px rgba(243,215,10,0); } }
+.hero-cues { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.hero-cues .hero-hint { margin-bottom: 0; }
+.scroll-cue {
+  display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 12px; border-radius: 999px;
+  background: var(--livery); color: var(--night); text-decoration: none;
+  font-size: .8125rem; font-weight: 750; font-stretch: 105%;
+  box-shadow: 0 10px 30px rgba(243,215,10,.25);
+  transition: transform .25s var(--ease), background-color .2s;
+  animation: cuebob 2.4s var(--ease) infinite;
+}
+.scroll-cue:hover { background: #FFE53D; transform: translateY(-2px); animation-play-state: paused; }
+@keyframes cuebob { 0%, 70%, 100% { transform: translateY(0); } 80% { transform: translateY(3px); } 90% { transform: translateY(-1px); } }
+.cue-mouse { position: relative; width: 14px; height: 21px; border: 1.7px solid currentColor; border-radius: 8px; }
+.cue-mouse::after { content: ""; position: absolute; left: 50%; top: 4px; width: 2px; height: 5px; margin-left: -1px; border-radius: 2px; background: currentColor; animation: wheel 1.6s ease-in-out infinite; }
+@keyframes wheel { 0% { opacity: 0; transform: translateY(-2px); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(7px); } }
+.cue-chev { display: none; position: relative; width: 12px; height: 18px; }
+.cue-chev::before, .cue-chev::after { content: ""; position: absolute; left: 1px; width: 8px; height: 8px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); animation: chev 1.6s ease-in-out infinite; }
+.cue-chev::before { top: 0; }
+.cue-chev::after { top: 6px; animation-delay: .2s; }
+@keyframes chev { 0% { opacity: 0; translate: 0 -3px; } 40% { opacity: 1; } 100% { opacity: 0; translate: 0 4px; } }
 .hint-touch { display: none; }
-@media (hover: none) { .hint-touch { display: inline; } .hint-desk { display: none; } }
+@media (hover: none) { .hint-touch { display: inline; } .hint-desk { display: none; } .cue-mouse { display: none; } .cue-chev { display: inline-block; } }
 @media (max-width: 760px) {
   .hero { height: 190vh; }
   .hero-name { top: 15%; }
   .hero-meta { grid-template-columns: 1fr 1fr; }
-  .hero-hint { grid-column: 1 / -1; grid-row: 1; justify-self: center; }
+  .hero-cues { grid-column: 1 / -1; grid-row: 1; justify-self: center; }
   .hero-tag { padding: 10px 12px; }
   .tag-v { font-size: .9375rem; }
   .marquee-a { top: 16%; } .marquee-b { top: 70%; }
