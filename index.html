@@ -1,421 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <!-- TODO: ADD My own analytics -->
-
-	<meta charset="utf-8">
-
-  <title>Vighnesh</title>
-  <link rel="shortcut icon" href="images/vighnesh-logo-tiny.png" type="image/x-icon">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-
-	<!-- stylesheets css -->
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/index/et-line-font.css">
-  <link rel="stylesheet" href="css/index/index.css">
-  <!-- for wow animations -->
-	<link rel="stylesheet" href="css/wow_js_animations/animate.min.css">
-  <!-- for icons like linkedin and github -->
-	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
-  <!-- for the slideshow -->
-  <link rel="stylesheet" href="css/index/vegas.min.css">
-  <!-- for the loading circle-->
-  <link rel="stylesheet" href="css/preloader/preloader.css">
-  <!-- for the cards -->
-  <link rel="stylesheet" href="css/cards.css">
-
-	<link href='https://fonts.googleapis.com/css?family=Rajdhani:400,500,700' rel='stylesheet' type='text/css'>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vighnesh Natarajan Ganesh | Quantitative Researcher &amp; Racer #90</title>
+<meta name="description" content="Quantitative researcher at Millennium working with commodities pods; builds the power demand forecasts traded across 32 European markets. Ex-Goldman Sachs, London Business School researcher, two first-author journal papers. National-level motorcycle racer, #90.">
+<meta name="author" content="Vighnesh Natarajan Ganesh">
+<meta name="theme-color" content="#0D1B2E">
+<link rel="canonical" href="https://vighneshnatarajanganesh.github.io/personal-website/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Vighnesh Natarajan Ganesh | Quant Researcher, Racer #90">
+<meta property="og:description" content="Power demand forecasting across 32 European markets at Millennium. Two first-author papers with Derek Bunn. National-level motorcycle racer.">
+<meta property="og:url" content="https://vighneshnatarajanganesh.github.io/personal-website/">
+<meta property="og:image" content="https://vighneshnatarajanganesh.github.io/personal-website/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/BodoniModa-Italic-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hero-desk-1800.webp" as="image" media="(min-width: 700px)" crossorigin="anonymous">
+<link rel="preload" href="assets/img/hero-desk-1100.webp" as="image" media="(max-width: 699px)" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Vighnesh Natarajan Ganesh","jobTitle":"Quantitative Researcher","worksFor":{"@type":"Organization","name":"Millennium Management"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"BITS Pilani"},{"@type":"CollegeOrUniversity","name":"London Business School"}],"address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"email":"mailto:vighneshnganeshofficial@gmail.com","url":"https://vighneshnatarajanganesh.github.io/personal-website/","sameAs":["https://www.linkedin.com/in/vighnesh-ng/"],"knowsAbout":["European power markets","Electricity demand forecasting","Probabilistic forecasting","Reinforcement learning","Commodities"]}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- preloader section -->
-<section class="preloader">
-	<div class="sk-circle">
-      <div class="sk-circle1 sk-child"></div>
-      <div class="sk-circle2 sk-child"></div>
-      <div class="sk-circle3 sk-child"></div>
-      <div class="sk-circle4 sk-child"></div>
-      <div class="sk-circle5 sk-child"></div>
-      <div class="sk-circle6 sk-child"></div>
-      <div class="sk-circle7 sk-child"></div>
-      <div class="sk-circle8 sk-child"></div>
-      <div class="sk-circle9 sk-child"></div>
-      <div class="sk-circle10 sk-child"></div>
-      <div class="sk-circle11 sk-child"></div>
-      <div class="sk-circle12 sk-child"></div>
+<!-- ============ LIGHTS-OUT LOADER ============ -->
+<div class="loader" data-loader aria-hidden="true">
+  <div class="loader-gantry">
+    <span class="pod"><i></i><i></i></span>
+    <span class="pod"><i></i><i></i></span>
+    <span class="pod"><i></i><i></i></span>
+    <span class="pod"><i></i><i></i></span>
+    <span class="pod"><i></i><i></i></span>
   </div>
-</section>
+  <p class="loader-label"><span data-loader-pct>00</span></p>
+</div>
 
-<!-- home section -->
-<section id="home">
-	<div class="container">
-		<div class="row">
+<!-- ============ NAV ============ -->
+<header class="nav" data-nav>
+  <a class="logo" href="#top" aria-label="Vighnesh Natarajan Ganesh, back to top">
+    <span class="logo-a">Vighnesh</span>
+    <span class="logo-b">N Ganesh</span>
+  </a>
+  <div class="nav-right">
+    <a class="pill" href="#contact">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 4h11v8h-11z M2.8 4.4L8 8.6l5.2-4.2"/></svg>
+      Contact
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-btn>
+      <span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+  </div>
+</header>
 
-			<div class="col-md-offset-2 col-md-8 col-sm-12">
-				<div class="home-thumb">
-					<h1 class="wow fadeInUp" data-wow-delay="0.4s">Vighnesh Natarajan Ganesh</h1>
-          <br>
-          <h4 class="wow fadeInUp" data-wow-delay="0.6s"> Goldman Sachs Summer Analyst, 2022 </h4>
-          <h4 class="wow fadeInUp" data-wow-delay="0.6s"> Visiting Researcher, London Business School </h4>
-          <h4 class="wow fadeInUp" data-wow-delay="0.6s"> BITS Pilani, Computer Science + Finance </h4>
-          <a href="pdfs/resume.pdf" target="_blank" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.8s">RESUME</a>
-        	<a href="mailto:f20190131@pilani.bits-pilani.ac.in?cc=ngvighnesh@gmail.com" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="1s">E-MAIL</a>
-          <br><br><br><br>
-          <div class="align-text-bottom">
-            <h5 class="wow fadeInUp" data-wow-delay="1.1s">Scroll Down for more</h5>
-            <h5 class="wow fadeInUp" data-wow-delay="1.15s">˅</h5>
-          </div>
-        </div>
-			</div>
+<nav class="menu" id="menu" aria-label="Site" data-menu hidden>
+  <ol class="menu-list">
+    <li><a href="#career"><span class="menu-n">01</span>Career</a></li>
+    <li><a href="#results"><span class="menu-n">02</span>Results</a></li>
+    <li><a href="#research"><span class="menu-n">03</span>Research</a></li>
+    <li><a href="#track"><span class="menu-n">04</span>Track</a></li>
+    <li><a href="#contact"><span class="menu-n">05</span>Contact</a></li>
+  </ol>
+  <div class="menu-foot">
+    <a href="mailto:vighneshnganeshofficial@gmail.com">vighneshnganeshofficial@gmail.com</a>
+    <a href="https://www.linkedin.com/in/vighnesh-ng/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</nav>
 
-		</div>
-	</div>		
-</section>
+<main id="main">
 
-<!-- about section -->
-<section id="about">
-	<div class="container">
-		<div class="row">
-
-      <div class="col-md-6 col-sm-12">
-        <img src="images/me/my-face-circle.png" class="img-responsive wow fadeInUp" alt="About">
-      </div>
-
-			<div class="col-md-6 col-sm-12">
-				<div class="about-thumb">
-					<div class="section-title">
-						<h1 class="wow fadeIn" data-wow-delay="0.2s">WHO AM I?</h1>
-					</div>
-					<div class="wow fadeInUp" data-wow-delay="0.6s">
-						<table class="table table-hover">
-              <tr>
-                <td rowspan="1"> <B> Education </B> </td>
-                <td>B.E. in Computer Science Engineering, Minor In Finance</td>
-              </tr>
-              <tr>
-                <td rowspan="4"><B>Industry Experience</B></td>
-                <td> Summer Analyst 2022 <em> Goldman Sachs </em> </td>
-              </tr>
-              <tr>
-                <td> Global Alpha Researcher <em> Trexquant Investment </em> </td>
-              </tr>
-              <tr>
-                <td> Data Science Intern <em> LuMos, Silicon Valley (Social Media Startup) </em> </td>
-              </tr>
-              <tr>
-                <td> Intern <em> Bharat Electronics </em> </td>
-              </tr>
-              <tr>
-                <td rowspan="2"><B>Academic Experience</B></td>
-                <td> Visiting Researcher <em> London Business School </em> </td>
-              </tr>
-              <tr>
-                <td> Data Science for Social Good (DSSGx) Fellow <em> University of Warwick</em></td>
-              </tr>
-              <tr>
-                <td rowspan="4"><B>Positions of Responsibility</B></td>
-                <td>President <em> Safety and Medical Advisory Council</em></td>
-              </tr>
-              <tr>
-                <td>ML Lead of Microsoft Ambassadors <em> Microsoft Learn Student Partners of BITS Pilani </em></td>
-              </tr>
-              <tr>
-                <td>Vice President of Membership <em> Toastmasters </em></td>
-              </tr>
-              <tr>
-                <td> Club Secretary <em> Pilani Tamil Mandram </em></td>
-              </tr>
-              <tr>
-                <td rowspan="4"><B>Extra-curricular</B></td>
-                <td>Percussion Instruments</td>
-              </tr>
-              <tr>
-                <td>Badminton</td>
-              </tr>
-              <tr>
-                <td>Power Lifting</td>
-              </tr>
-              <tr>
-                <td>Public Speaking</td>
-              </tr>
-              <tr>
-                <td><B> Age </B></td>
-                <td class="text-monospace"><span id="myAge"></span></td>
-              </tr>
-            </table>
-					</div>
-        </div>
-      </div>
-      <!-- <div class="clearfix text-center col-md-12 col-sm-12">
-        <a href="teamPage.html" class="btn btn-default smoothScroll">Resume</a>
-      </div> -->
+<!-- ============ HERO ============ -->
+<section class="hero" id="top" data-hero>
+  <div class="hero-pin">
+    <div class="marquee marquee-a" aria-hidden="true" data-marquee="-1">
+      <div class="marquee-track"><span>Quantitative Researcher</span><span>Quantitative Researcher</span><span>Quantitative Researcher</span><span>Quantitative Researcher</span></div>
     </div>
-	</div>
-</section>
-
-
-<!-- feature section -->
-<section id="feature">
-  
-  <div class="container">
-
-    <svg preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgcolor-light">
-      <path d="M0 0 L50 100 L100 0 Z"></path>
-    </svg>
-
-    <div class="row">
-      <div class="col-lg-12 text-center">
-        <div class="media wow fadeInUp" data-wow-delay="0.4s">
-          <div class="media-body">
-            <h2 class="media-heading">Featured Experiences</h2>
-          </div>
-        </div>
-      </div>
+    <div class="marquee marquee-b" aria-hidden="true" data-marquee="1">
+      <div class="marquee-track"><span>National-level racer</span><span>National-level racer</span><span>National-level racer</span><span>National-level racer</span></div>
     </div>
 
-    <div class="row">
-      <div class="col-md-4 center-block">
-        <div class="media wow fadeInUp" data-wow-delay="0.5s">
-          <!-- <h4 class="text-center">Title</h4> -->
-          <div class="profile-card-4 text-center"><img src="images/companies/GS.png" class="img img-responsive">
-            <div class="profile-content">
-              <div class="profile-name">
-                Goldman Sachs
-                <div class="profile-subname">
-                  Summer Analyst
-                </div>
-              </div>           
-              <div class="profile-description">
-                Ideated and organized the event that recorded the highest participation in the All-India Goldman Sachs Hackathon.
-                <br> <br>
-                Created new orchestrations, that will process <b>billions of dollars in personal loans</b> with better <b>scalability</b>.
-                <br> <br>
-                <b>Minimized client loss</b> by developing a command to restart the loan applications that fail due to production issues. 
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="hero-card" data-hero-card>
+      <canvas class="contours" data-contours aria-hidden="true"></canvas>
+      <h1 class="hero-name">
+        <span class="hero-name-a">Vighnesh</span>
+        <span class="hero-name-b">Natarajan Ganesh</span>
+        <span class="visually-hidden">, Quantitative Researcher at Millennium and national-level motorcycle racer</span>
+      </h1>
+      <div class="hero-figure" data-reveal>
+        <img class="hero-fallback" crossorigin="anonymous" src="assets/img/hero-desk-1800.webp" srcset="assets/img/hero-desk-1100.webp 1100w, assets/img/hero-desk-1800.webp 1800w" sizes="(min-width: 700px) 120vh, 160vw" width="1800" height="1500" alt="Vighnesh in a cream sweater, arms crossed, smiling">
       </div>
-
-      <div class="col-md-4">
-        <div class="media wow fadeInUp" data-wow-delay="0.6s">
-          <!-- <h4 class="text-center">Title</h4> -->
-          <div class="profile-card-4 text-center"><img src="images/companies/LBS.jpg" class="img img-responsive">
-            <div class="profile-content">
-              <div class="profile-name">
-                London Business School
-                <div class="profile-subname">
-                  Visiting Researcher
-                </div>
-              </div>
-              <div class="profile-description">
-                Modelled the imbalance system of British electricity market to predict the settlement prices using external factors.
-                <br> <br>
-                <b>Improved on the present state-of-the-art algorithm's</b> point and quantile forecast accuracy using a custom neural network.
-                <br> <br>
-                <b>Pinball loss reduced by >90% for the 1st, 5th, 95th and 99th percentile forecasts</b> and RMSE decreased from 14.7 to 14.5 GPB on back testing. 	
-              </div>
-            </div>
-          </div>
+      <div class="hero-meta">
+        <div class="hero-tag">
+          <span class="tag-k">Desk</span>
+          <span class="tag-v">Quantitative Researcher</span>
+          <span class="tag-s">Millennium, Bengaluru</span>
         </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="media wow fadeInUp" data-wow-delay="0.7s">
-          <!-- <h4 class="text-center">Title</h4> -->
-          <div class="profile-card-4 text-center"><img src="images/companies/Warwick.jpg" class="img img-responsive">
-            <div class="profile-content">
-              <div class="profile-name">
-                University of Warwick
-                <div class="profile-subname">
-                  DSSGx Fellow
-                </div>
-              </div>
-              <div class="profile-description">
-                Worked with <b>The Federal Ministry for Economic Affairs and Energy</b> of <b>Germany</b>.
-                <br> <br>
-                <b>Developed multiple models</b> (SARIMAX, VAR, deep neural networks) and <b>incorporated auto machine learning</b> in Python.
-                <br> <br>
-                <b>Authored a chapter in the textbook:</b> "Neue Dimensionen in Data Science", <u><a href="https://www.vde-verlag.de/books/537721/neue-dimensionen-in-data-science.html" target="_blank">Link To Buy</a></u>.
-                <br> <br>
-                Worked on Streamlit to build an application, to deploy the model with adequate abstraction for use by economists. <u><a href="https://bmwi-tool.herokuapp.com/" target="_blank">Try the Tool</a></u> <u><a href="https://dssgxuk.github.io/bmwi/" target='_blank'>Documentation</a></u>. 
-              </div>
-            </div>
-          </div>
+        <p class="hero-hint" data-hint><span class="hint-dot" aria-hidden="true"></span><span class="hint-desk">Move your cursor to see race day</span><span class="hint-touch">Drag across to see race day</span></p>
+        <div class="hero-tag hero-tag-r">
+          <span class="tag-k">Track</span>
+          <span class="tag-v">National-level racer</span>
+          <span class="tag-s">#90, INMRC Stock 301–400cc</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- POR section -->
-<section id="contact">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-md-offset-2 col-md-8 col-sm-12">
-				<div class="section-title">
-					<h1 class="wow fadeInUp" data-wow-delay="0.3s">Positions of Responsibility </h1>
-
-          <br>
-
-          <div class="">
-            <h3 class="wow fadeInUp text-left" data-wow-delay="0.4s">
-              <b><Strong>President |</Strong><em> Safety and Medical Advisory Council </em> </b>
-            </h3>
-            <p class="wow fadeInUp text-left" data-wow-delay="0.45s">
-              <strong>➣</strong> Coordinated <B>168 medical cases</B> including 4 emergencies with Birla Sarvajanik Hospital.
-              <br>
-              <strong>➣</strong> <B>Doubled</B> the yearly <B>registrations for DATRI</B> Stem Cell Registry from BITS with 150+ students registered.
-              <br>
-              <strong>➣</strong> Lead a team of 4 programmers and 2 writers to create a blog site
-              <br>
-              <strong>➣</strong> Organized first aid camps of BOSM, Oasis 2019.
-            </p>
-          </div>
-
-          <br><br>
-
-          <div>
-            <h3 class="wow fadeInUp text-right" data-wow-delay="0.4s">
-              <b><Strong>Vice-President of Membership |</Strong><em> Toastmasters </em> </b>
-            </h3>
-            <p class="wow fadeInUp text-right" data-wow-delay="0.45s">
-              <strong>➣</strong> <b> Doubled no. of paying members</b> during my tenure.
-              <br>
-              <strong>➣</strong> <b> Quadrupled no. of paying women members</b> by introducing a "Women in Toastmasters" drive.
-              <br>
-              <strong>➣</strong> <b> First</b> and one of only two members <b>to finish a Toastmaster Pathway</b> in BITS Pilani.
-              <br>
-              <strong>➣</strong> Achieved <b>Magical Leader</b> and <b>Triple Crown</b> Award from Toastmasters District 41.
-            </p>
-          </div>
-
-          <br><br>
-
-          <div>
-            <h3 class="wow fadeInUp text-left" data-wow-delay="0.4s">
-              <b><strong>Lead of the Ambassadors |</strong><em> Microsoft Learn Student Ambassadors Bits Pilani </em> </b>
-            </h3>
-            <p class="wow fadeInUp text-left" data-wow-delay="0.45s">
-              <strong>➣</strong> <b>Led a team of 20 Ambassadors</b> for a year as their ML Lead 
-              <br>
-              <strong>➣</strong> Created open-source projects and learning pathways.
-              <br>
-              <strong>➣</strong> Conducted a workshop with <b>Microsoft employees</b> to teach BITS students about <b>ML on the Cloud</b>.
-              <br>
-              <strong>➣</strong> Organized and Spoke in a Talk with <b>150+ attendees</b>. 
-            </p>
-          </div>
-
-          <br><br>
-
-          <div>
-            <h3 class="wow fadeInUp text-right" data-wow-delay="0.4s">
-              <b><strong>Secretary |</strong><em> Pilani Tamil Mandram (Regional Association) </em> </b>
-            </h3>
-            <p class="wow fadeInUp text-right" data-wow-delay="0.45s">
-              <strong>➣</strong> Organized multiple cultural events including a musical performance in தமிழ்.
-            </p>
-          </div>
-
-				</div>
-        <br>
-        </p>
-      </div>
-
-    </div>
-	</div>
+<!-- ============ STATEMENT ============ -->
+<section class="statement" data-statement>
+  <p class="statement-text" data-words>
+    Quant research at the <em>cutting edge of commodities</em>, built alongside the pods that trade it. Published in <em>Quantitative Finance</em>. Racing <em>number 90</em> when the markets close.
+  </p>
+  <div class="proof">
+    <p class="proof-label">Desks and institutions</p>
+    <ul class="proof-row">
+      <li>Millennium</li><li>Goldman Sachs</li><li>London Business School</li><li>Trexquant</li><li>University of Warwick</li><li>BITS Pilani</li>
+    </ul>
+    <p class="proof-label">Published in</p>
+    <ul class="proof-row proof-row-serif">
+      <li>Quantitative Finance</li><li>IEEE Transactions on Energy Markets</li><li>Book chapter, VDE Verlag</li>
+    </ul>
+  </div>
 </section>
 
-<!-- Achievements and footer section -->
-<footer>
-	<div class="container">
-		<div class="row">
+<!-- ============ CAREER LAP (3D) ============ -->
+<section class="lap" id="career" data-lap aria-labelledby="lap-title">
+  <div class="lap-pin">
+    <canvas class="lap-canvas" data-lap-canvas aria-hidden="true"></canvas>
+    <div class="lap-labels" data-lap-labels aria-hidden="true"></div>
 
-      <svg class="svgcolor-light" preserveAspectRatio="none" viewBox="0 0 100 102" height="100" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0 L50 100 L100 0 Z"></path>
-      </svg>
+    <header class="lap-intro" data-lap-intro>
+      <p class="lap-kicker">Career</p>
+      <h2 class="lap-title" id="lap-title"><span>One</span> <em>lap</em></h2>
+      <p class="lap-sub">Seven corners, newest first. Scroll to drive it.</p>
+    </header>
 
-      <div class="row">
-        <div class="row text-center">
-          <h1>Other Achievements</h1>
-        </div>
-        <div class="col center-block">
-          <div class="media wow fadeInUp" data-wow-delay="0.5s">
-            <!-- <h4 class="text-center">Title</h4> -->
-            <div class="profile-card-4 text-center"><img src="images/companies/guinness_darkened.jpg" class="img img-responsive">
-              <div class="profile-content">
-                <div class="profile-name">
-                  World Record
-                </div>           
-                <div class="profile-description">
-                  <b>
-                    Delivered a keyboard performance as a part of a Guinness World Record setting concert - "STOP CHILD LABOUR" on Labour Day of 2017 
-                  </b>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      <div class="col-md-1 col-sm-1"></div>
-
-      <br><br><br><br>
-      <div class="col-md-4 col-sm-5">
-        <h2 class="wow fadeInUp" data-wow-delay="0.55s">Thank you!</h2>
-        <p class="wow fadeInUp" data-wow-delay="0.6s">
-          Also available at:
-        </p>
-        <ul class="social-icon">
-          <li><a href="https://www.linkedin.com/in/vighnesh-ng/" class="fa fa-linkedin wow bounceIn" data-wow-delay="0.9s" target="_blank"></a></li>
-          <li><a href="mailto:f20190131@pilani.bits-pilani.ac.in?cc=ngvighnesh@gmail.com" class="fa fa-envelope wow bounceIn" data-wow-delay="0.95s" target="_blank"></a></li>
-          <li><a href="tel:+918939575774" class="fa fa-phone wow bounceIn" data-wow-delay="1s" target="_blank"></a></li>
+    <ol class="lap-panels" data-lap-panels>
+      <li class="panel" data-u="start">
+        <p class="panel-turn"><span class="panel-n">Lights out</span><b>2024 – now</b></p>
+        <h3 class="panel-org">Millennium</h3>
+        <p class="panel-role">Quantitative Researcher, Commodities</p>
+        <ul class="panel-points">
+          <li>Built from zero the power demand forecasts portfolio managers trade across 32 European markets.</li>
+          <li>Physical and AI weather models (ECMWF, GFS, EC46, AIFS, GenCast) turned into earlier, cleaner signal.</li>
+          <li>Own the pipeline end to end, from ingestion to monitoring.</li>
         </ul>
-      </div>
-		</div>
-	</div>
-</footer>
+      </li>
+      <li class="panel" data-u="t1">
+        <p class="panel-turn"><span class="panel-n">Turn 1</span><b>2025</b></p>
+        <h3 class="panel-org">AI in APAC Hackathon</h3>
+        <p class="panel-role">Winner, AI assistant category</p>
+        <ul class="panel-points">
+          <li>Millennium’s hackathon: 130+ people in 30 teams across Singapore, Bengaluru, Hong Kong and Tokyo.</li>
+          <li><a href="https://www.mlp.com/life-at-millennium/millenniums-ai-in-apac-hackathon/" target="_blank" rel="noopener">Millennium’s write-up</a></li>
+        </ul>
+      </li>
+      <li class="panel" data-u="t2">
+        <p class="panel-turn"><span class="panel-n">Turn 2</span><b>2022 – 24</b></p>
+        <h3 class="panel-org">Goldman Sachs</h3>
+        <p class="panel-role">Analyst, Commodities Strats (Summer Analyst 2022)</p>
+        <ul class="panel-points">
+          <li>Forecast US gas burn by modelling marginal demand from the power market.</li>
+          <li>Built ISO-level power models and added behind-the-meter solar to fix a structural supply bias.</li>
+          <li>Owned the agriculture dashboard behind the GS commodity index team’s USDA reads.</li>
+        </ul>
+      </li>
+      <li class="panel" data-u="t3">
+        <p class="panel-turn"><span class="panel-n">Turn 3</span><b>2022 – 23</b></p>
+        <h3 class="panel-org">London Business School</h3>
+        <p class="panel-role">Visiting Researcher with Prof. Derek Bunn</p>
+        <ul class="panel-points">
+          <li>Forecast British imbalance prices; a shared-parameter neural network cut tail-quantile loss by 95%.</li>
+          <li>Built Q-learning agents that trade long and short with live value-at-risk.</li>
+          <li>Both became first-author journal papers.</li>
+        </ul>
+      </li>
+      <li class="panel" data-u="t4">
+        <p class="panel-turn"><span class="panel-n">Turn 4</span><b>2022</b></p>
+        <h3 class="panel-org">Trexquant</h3>
+        <p class="panel-role">Global Alpha Researcher</p>
+        <ul class="panel-points">
+          <li>Built a high information-ratio US Treasury signal from auction-day effects, mean reversion and yield spreads.</li>
+        </ul>
+      </li>
+      <li class="panel" data-u="t5">
+        <p class="panel-turn"><span class="panel-n">Turn 5</span><b>2021</b></p>
+        <h3 class="panel-org">University of Warwick</h3>
+        <p class="panel-role">Data Science for Social Good Fellow</p>
+        <ul class="panel-points">
+          <li>Forecast county-level unemployment for Germany’s Federal Ministry for Economic Affairs and Energy, used to steer development funding.</li>
+          <li>Shipped an <a href="https://github.com/DSSGxUK/bmwi" target="_blank" rel="noopener">open-source app</a> and a book chapter.</li>
+        </ul>
+      </li>
+      <li class="panel" data-u="t6">
+        <p class="panel-turn"><span class="panel-n">Turn 6</span><b>2019 – 23</b></p>
+        <h3 class="panel-org">BITS Pilani</h3>
+        <p class="panel-role">B.E. Computer Science, minor in Finance. CGPA 8.3</p>
+        <ul class="panel-points">
+          <li>Where it started: computer science with a finance minor at one of India’s top engineering schools.</li>
+        </ul>
+      </li>
+      <li class="panel" data-u="finish">
+        <p class="panel-turn"><span class="panel-n">Chequered flag</span><b>Next</b></p>
+        <h3 class="panel-org">Next lap</h3>
+        <p class="panel-role">Quantitative Researcher by day. #90 by weekend.</p>
+        <ul class="panel-points">
+          <li><a href="#contact">Get in touch</a></li>
+        </ul>
+      </li>
+    </ol>
 
-<!-- modal
-<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-content modal-popup">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h2 class="modal-title">Our Newsletter</h2>
-        </div>
-        <form action="#" method="post">
-          <input name="fullname" type="text" class="form-control" id="fullname" placeholder="Full Name">
-          <input name="email" type="text" class="form-control" id="email" placeholder="Email Address">
-          <input name="submit" type="submit" class="form-control" id="submit" value="Subscribe Now">
-        </form>
-        <p>Thank you for your visiting!</p>
-      </div>
+    <div class="hud" data-hud aria-hidden="true">
+      <div class="hud-year"><span data-hud-year>Now</span></div>
+      <div class="hud-bar"><i data-hud-fill></i></div>
+      <div class="hud-lap">Lap <b>1</b>/1</div>
+    </div>
   </div>
-</div> -->
+</section>
 
+<!-- ============ RESULTS ============ -->
+<section class="results" id="results">
+  <div class="wrap">
+    <h2 class="big-title"><span>Results</span> <em>sheet</em></h2>
+    <table class="sheet">
+      <thead><tr><th scope="col">Year</th><th scope="col">Result</th><th scope="col">Event</th><th scope="col">Detail</th></tr></thead>
+      <tbody>
+        <tr><td class="c-year">2025</td><td class="c-res"><span class="plate plate-desk">Winner</span></td><th scope="row" class="c-event">Millennium AI in APAC Hackathon, AI assistant category</th><td class="c-detail">130+ employees in 30 teams across four offices.</td></tr>
+        <tr><td class="c-year">2024</td><td class="c-res"><span class="plate plate-paper">1st author</span></td><th scope="row" class="c-event"><a href="https://www.tandfonline.com/doi/abs/10.1080/14697688.2024.2420609" target="_blank" rel="noopener"><cite>Quantitative Finance</cite>, vol. 24 (11)</a></th><td class="c-detail">Reinforcement learning for trading real-time electricity. With Derek Bunn.</td></tr>
+        <tr><td class="c-year">2024</td><td class="c-res"><span class="plate plate-paper">1st author</span></td><th scope="row" class="c-event"><a href="https://ieeexplore.ieee.org/abstract/document/10177230" target="_blank" rel="noopener"><cite>IEEE Trans. on Energy Markets, Policy and Regulation</cite>, vol. 2 (1)</a></th><td class="c-detail">Forecasting the full distribution of British imbalance prices. With Derek Bunn.</td></tr>
+        <tr><td class="c-year">2021</td><td class="c-res"><span class="plate plate-paper">Chapter</span></td><th scope="row" class="c-event">Book chapter in <a href="https://www.vde-verlag.de/books/537721/neue-dimensionen-in-data-science.html" target="_blank" rel="noopener"><cite>Neue Dimensionen in Data Science</cite></a>, VDE Verlag</th><td class="c-detail">From forecasting work for Germany’s Federal Ministry for Economic Affairs and Energy.</td></tr>
+        <tr><td class="c-year">2026</td><td class="c-res"><span class="plate plate-track">Finalist</span></td><th scope="row" class="c-event">Royal Enfield Slide School Cup, national final</th><td class="c-detail">One of 12 riders to qualify nationally. Flat track, Jaipur.</td></tr>
+        <tr><td class="c-year">2026</td><td class="c-res"><span class="plate plate-track">P3</span></td><th scope="row" class="c-event">Slide School Cup, Bengaluru regionals</th><td class="c-detail">The podium that earned the national final.</td></tr>
+        <tr><td class="c-year">INMRC</td><td class="c-res"><span class="plate plate-track">Top 10</span></td><th scope="row" class="c-event">Indian National Motorcycle Racing Championship, Stock 301–400cc</th><td class="c-detail">National championship sanctioned by FMSCI. #90, Yamaha R3.</td></tr>
+        <tr><td class="c-year">2017</td><td class="c-res"><span class="plate plate-other">Record</span></td><th scope="row" class="c-event">Guinness World Record concert, “Stop Child Labour”</th><td class="c-detail">On keyboard in the record-setting performance.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<!-- Back top -->
-<a href="#back-top" class="go-top"><i class="fa fa-angle-up"></i></a>
+<!-- ============ RESEARCH ============ -->
+<section class="research" id="research">
+  <div class="wrap">
+    <h2 class="big-title"><span>Research</span></h2>
+    <p class="research-lede">Two first-author journal papers with Derek Bunn, Professor of Decision Sciences at London Business School, and a book chapter.</p>
+    <ol class="papers">
+      <li class="paper">
+        <p class="paper-venue"><cite>Quantitative Finance</cite> 24 (11), 1545–1559, 2024</p>
+        <h3 class="paper-title"><a href="https://www.tandfonline.com/doi/abs/10.1080/14697688.2024.2420609" target="_blank" rel="noopener">Algorithmic trading of real-time electricity with machine learning</a></h3>
+        <p class="paper-sum">Reinforcement-learning agents that find profitable strategies in Britain’s real-time imbalance market, compared across a pure trader, a gas generator and a battery.</p>
+      </li>
+      <li class="paper">
+        <p class="paper-venue"><cite>IEEE Trans. on Energy Markets, Policy and Regulation</cite> 2 (1), 30–39, 2024</p>
+        <h3 class="paper-title"><a href="https://ieeexplore.ieee.org/abstract/document/10177230" target="_blank" rel="noopener">Forecasting imbalance price densities with statistical methods and neural networks</a></h3>
+        <p class="paper-sum">A head-to-head of nonlinear statistical models and neural architectures, including N-BEATS, attention and recurrent networks, for forecasting the full distribution of British imbalance prices.</p>
+      </li>
+      <li class="paper">
+        <p class="paper-venue">Book chapter, VDE Verlag</p>
+        <h3 class="paper-title"><a href="https://www.vde-verlag.de/books/537721/neue-dimensionen-in-data-science.html" target="_blank" rel="noopener">Book chapter in <cite>Neue Dimensionen in Data Science</cite></a></h3>
+        <p class="paper-sum">The regional unemployment forecasting built during the Data Science for Social Good fellowship, written up for a German data science textbook.</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
-<!-- javscript js -->
-<script src="js/jquery.js"></script>
-<script src="js/index/bootstrap.min.js"></script>
-<script src="js/age_clac.js"></script>
+<!-- ============ TRACK ============ -->
+<section class="track" id="track">
+  <div class="wrap track-head">
+    <h2 class="big-title big-title-xl"><span>On</span> <em>track</em></h2>
+    <div class="track-intro">
+      <p class="track-lede">I race a Yamaha R3 in the Stock 301–400cc class of the Indian National Motorcycle Racing Championship, and flat track in Royal Enfield’s Slide School Cup.</p>
+      <dl class="spec">
+        <div><dt>Number</dt><dd class="spec-num">90</dd></div>
+        <div><dt>Machine</dt><dd>Yamaha YZF-R3</dd></div>
+        <div><dt>Class</dt><dd>Stock 301–400cc</dd></div>
+        <div><dt>Series</dt><dd>INMRC, sanctioned by FMSCI</dd></div>
+        <div><dt>Flat track</dt><dd>Slide School Cup national finalist, 2026</dd></div>
+      </dl>
+    </div>
+  </div>
 
-<script src="js/index/vegas.min.js"></script>  <!-- along with jquery, is used for the slideshow-->
+  <div class="collage" data-collage>
+    <figure class="ph ph-1" data-speed="0.12"><img src="assets/img/pan-wide-1400.webp" srcset="assets/img/pan-wide-1400.webp 1400w, assets/img/pan-wide-2400.webp 2400w" sizes="(min-width: 900px) 58vw, 92vw" width="1400" height="787" alt="The #90 R3 flat out on the straight, background blurred" loading="lazy"><figcaption>Flat out, INMRC</figcaption></figure>
+    <figure class="ph ph-2" data-speed="-0.1"><img src="assets/img/helmet-700.webp" srcset="assets/img/helmet-700.webp 700w, assets/img/helmet-1080.webp 1080w" sizes="(min-width: 900px) 26vw, 60vw" width="700" height="875" alt="Close-up of Vighnesh's helmet, tucked in behind the screen" loading="lazy"><figcaption>Full tuck. Photo: Praharsha Majeti</figcaption></figure>
+    <blockquote class="collage-quote" data-speed="0.05"><p>Racing and forecasting reward the same habit: commit under uncertainty, read the data afterwards, find the next tenth.</p></blockquote>
+    <figure class="ph ph-3" data-speed="0.18"><img src="assets/img/dice-700.webp" srcset="assets/img/dice-700.webp 700w, assets/img/dice-1200.webp 1200w" sizes="(min-width: 900px) 30vw, 70vw" width="700" height="875" alt="Number 90 leading number 21 through a corner" loading="lazy"><figcaption>Holding off #21</figcaption></figure>
+    <figure class="ph ph-4" data-speed="-0.06"><img src="assets/img/plaque-800.webp" srcset="assets/img/plaque-800.webp 800w, assets/img/plaque-1400.webp 1400w" sizes="(min-width: 900px) 34vw, 80vw" width="800" height="600" alt="Dirt helmet beside a third-place number board, Slide School Cup Bangalore Regionals" loading="lazy"><figcaption>P3, Bengaluru regionals, 2026</figcaption></figure>
+    <figure class="ph ph-5" data-speed="0.1"><img src="assets/img/flattrack-600.webp" srcset="assets/img/flattrack-600.webp 600w, assets/img/flattrack-1000.webp 1000w" sizes="(min-width: 900px) 24vw, 60vw" width="600" height="800" alt="Vighnesh on a white Royal Enfield flat track bike, number 1" loading="lazy"><figcaption>National final, Jaipur, 2026</figcaption></figure>
+    <figure class="ph ph-6" data-speed="-0.14"><img src="assets/img/podium-800.webp" srcset="assets/img/podium-800.webp 800w, assets/img/podium-1400.webp 1400w" sizes="(min-width: 900px) 30vw, 80vw" width="800" height="600" alt="Three riders on the Slide School Cup podium" loading="lazy"><figcaption>Bengaluru regionals podium</figcaption></figure>
+  </div>
+</section>
 
-<script src="js/wow_js_animations/wow.min.js"></script> <!-- for wow appear animations -->
-<script src="js/index/smoothscroll.js"></script>
-<script src="js/index/custom.js"></script>
-<script src="js/preloader/preloader.js"></script> <!-- for the loading circle -->
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 class="big-title big-title-xl"><span>Get in</span> <em>touch</em></h2>
+    <a class="contact-email" href="mailto:vighneshnganeshofficial@gmail.com">vighneshnganeshofficial<wbr>@gmail.com</a>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="mailto:vighneshnganeshofficial@gmail.com">Email me</a>
+      <a class="btn btn-outline" href="https://www.linkedin.com/in/vighnesh-ng/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <footer class="wrap footer">
+    <p>© 2026 Vighnesh Natarajan Ganesh. Bengaluru.</p>
+    <p>Photography by Praharsha Majeti and Agile.</p>
+  </footer>
+</section>
 
+</main>
+<script type="module" src="assets/js/app.js"></script>
 </body>
 </html>
