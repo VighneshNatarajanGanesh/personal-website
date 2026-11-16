@@ -94,7 +94,7 @@ html:not(.js) .loader { display: none; }
 .nav::before { content: ""; position: absolute; inset: 0 0 -36px 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgba(13,27,46,.92) 0%, rgba(13,27,46,.6) 55%, rgba(13,27,46,0) 100%); opacity: 0; transition: opacity .35s; }
 .nav.is-scrolled::before { opacity: 1; }
 .logo { display: flex; flex-direction: column; text-decoration: none; line-height: .92; }
-.logo-a { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 1.4rem; letter-spacing: -.01em; }
+.logo-a { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; font-weight: 500; font-size: 1.4rem; letter-spacing: -.01em; }
 .logo-b { font-weight: 850; font-stretch: 118%; font-size: .9rem; text-transform: uppercase; letter-spacing: .02em; }
 .nav-right { display: flex; align-items: center; gap: 8px; }
 .pill {
@@ -129,7 +129,7 @@ html:not(.js) .loader { display: none; }
   transition: color .2s;
 }
 .menu-list a:hover { color: var(--livery); }
-.menu-n { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: .32em; color: var(--livery); letter-spacing: 0; }
+.menu-n { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; font-weight: 500; font-size: .32em; color: var(--livery); letter-spacing: 0; }
 .menu-foot { display: flex; flex-wrap: wrap; gap: 8px 28px; color: var(--mist); }
 
 /* =========================================================
@@ -143,7 +143,7 @@ html:not(.js) .loader { display: none; }
   line-height: .9;
 }
 .marquee-track { display: inline-flex; gap: .45em; will-change: transform; }
-.marquee-a { top: 18%; font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--livery); font-size: clamp(4rem, 15vw, 15rem); letter-spacing: -.02em; }
+.marquee-a { top: 18%; font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; font-weight: 500; color: var(--livery); font-size: clamp(4rem, 15vw, 15rem); letter-spacing: -.02em; }
 .marquee-b { top: 54%; font-weight: 900; font-stretch: 125%; text-transform: uppercase; color: var(--frost); font-size: clamp(3.4rem, 12.5vw, 12.5rem); letter-spacing: -.03em; }
 .marquee-a span::after, .marquee-b span::after { content: "/"; display: inline-block; margin-left: .45em; opacity: .35; font-style: normal; }
 
@@ -161,7 +161,7 @@ html:not(.js) .loader { display: none; }
   display: flex; flex-direction: column; align-items: center; text-align: center;
   font-weight: inherit; line-height: .86; pointer-events: none;
 }
-.hero-name-a { font-family: var(--serif); font-style: italic; font-weight: 500; color: var(--livery); font-size: clamp(4.2rem, 17vw, 17rem); letter-spacing: -.035em; }
+.hero-name-a { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; font-weight: 500; color: var(--livery); font-size: clamp(4.2rem, 17vw, 17rem); letter-spacing: -.035em; }
 .hero-name-b { font-weight: 900; font-stretch: 125%; text-transform: uppercase; font-size: clamp(1.45rem, 6.3vw, 8.6rem); letter-spacing: -.03em; color: var(--frost); margin-top: .12em; white-space: nowrap; }
 .hero-figure { position: absolute; inset: 0; z-index: 2; }
 .hero-figure canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: pan-y; }
@@ -177,7 +177,7 @@ html:not(.js) .loader { display: none; }
 }
 .hero-tag { display: grid; gap: 2px; justify-items: start; max-width: 260px; padding: 14px 16px; border-radius: 14px; background: rgba(13, 27, 46, .55); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: inset 0 0 0 1px rgba(169,180,196,.14); }
 .hero-tag-r { justify-self: end; justify-items: end; text-align: right; }
-.tag-k { font-family: var(--serif); font-style: italic; color: var(--livery); font-size: 1rem; line-height: 1.1; }
+.tag-k { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; color: var(--livery); font-size: 1rem; line-height: 1.1; }
 .tag-v { font-weight: 750; font-stretch: 108%; font-size: 1.0625rem; line-height: 1.2; }
 .tag-s { font-size: .8125rem; color: var(--mist); font-stretch: 92%; line-height: 1.35; }
 .hero-hint { display: inline-flex; align-items: center; gap: 10px; font-size: .8125rem; color: var(--frost); font-stretch: 95%; padding: 9px 14px; border-radius: 999px; background: rgba(13, 27, 46, .62); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); box-shadow: inset 0 0 0 1px rgba(169,180,196,.14); margin-bottom: 4px; }
@@ -224,14 +224,14 @@ html:not(.js) .loader { display: none; }
   font-weight: 850; font-stretch: 112%; text-transform: uppercase;
   font-size: clamp(2.1rem, 5.6vw, 5.6rem); line-height: .98; letter-spacing: -.02em;
 }
-.statement-text em { font-family: var(--serif); font-weight: 500; color: var(--livery); letter-spacing: -.01em; }
+.statement-text em { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-weight: 500; color: var(--livery); letter-spacing: -.01em; }
 .statement-text .w { display: inline-block; opacity: .14; transition: opacity .2s linear; }
 html:not(.js) .statement-text .w { opacity: 1; }
 .proof { margin: clamp(80px, 12vh, 140px) auto 0; max-width: 1100px; display: grid; gap: 14px; }
 .proof-label { font-size: .8125rem; color: var(--mist); font-stretch: 92%; margin-top: 18px; }
 .proof-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px clamp(26px, 3.6vw, 56px); }
 .proof-row li { font-weight: 750; font-stretch: 112%; font-size: clamp(1.05rem, 1.9vw, 1.6rem); color: var(--frost); opacity: .82; line-height: 1.2; }
-.proof-row-serif li { font-family: var(--serif); font-style: italic; font-weight: 500; font-stretch: 100%; }
+.proof-row-serif li { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; font-weight: 500; font-stretch: 100%; }
 
 /* =========================================================
    CAREER LAP
@@ -253,9 +253,9 @@ html:not(.js) .statement-text .w { opacity: 1; }
 .tl.is-on span { opacity: 1; }
 
 .lap-intro { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; gap: 14px; pointer-events: none; padding: 0 var(--gutter); }
-.lap-kicker { font-family: var(--serif); font-style: italic; color: var(--livery); font-size: clamp(1.2rem, 2vw, 1.6rem); }
+.lap-kicker { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; color: var(--livery); font-size: clamp(1.2rem, 2vw, 1.6rem); }
 .lap-title { font-weight: 900; font-stretch: 125%; text-transform: uppercase; font-size: clamp(3.6rem, 13vw, 13rem); line-height: .82; letter-spacing: -.03em; }
-.lap-title em { font-family: var(--serif); font-weight: 500; color: var(--livery); text-transform: uppercase; }
+.lap-title em { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-weight: 500; color: var(--livery); text-transform: uppercase; }
 .lap-sub { color: var(--mist); font-size: 1.0625rem; }
 
 .lap-panels { position: absolute; left: var(--gutter); bottom: clamp(56px, 9vh, 104px); width: min(560px, calc(100% - 2 * var(--gutter))); }
@@ -270,7 +270,7 @@ html:not(.js) .statement-text .w { opacity: 1; }
 }
 .panel.is-active { opacity: 1; visibility: visible; transform: none; clip-path: inset(0 0 0 0 round 20px); transition: opacity .35s var(--ease), transform .7s var(--ease), clip-path .7s var(--ease), visibility 0s; }
 .panel-turn { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 10px; }
-.panel-turn .panel-n { font-family: var(--serif); font-style: italic; color: var(--livery); font-size: 1.4rem; line-height: 1; }
+.panel-turn .panel-n { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; color: var(--livery); font-size: 1.4rem; line-height: 1; }
 .panel-turn b { font-weight: 800; font-stretch: 85%; font-variant-numeric: tabular-nums; color: var(--frost); font-size: 1rem; padding: 5px 10px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(169,180,196,.35); }
 .panel-org { font-weight: 900; font-stretch: 122%; text-transform: uppercase; font-size: clamp(2rem, 3.5vw, 3.25rem); line-height: .92; letter-spacing: -.02em; }
 .panel-role { margin-top: 10px; color: var(--frost); font-weight: 600; font-size: 1.0625rem; line-height: 1.4; }
@@ -313,7 +313,7 @@ html:not(.js) .statement-text .w { opacity: 1; }
    SHARED SECTION TYPE
    ========================================================= */
 .big-title { font-weight: 900; font-stretch: 125%; text-transform: uppercase; font-size: clamp(3.2rem, 9.6vw, 9.5rem); line-height: .84; letter-spacing: -.03em; }
-.big-title em { font-family: var(--serif); font-weight: 500; color: var(--livery); letter-spacing: -.02em; }
+.big-title em { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-weight: 500; color: var(--livery); letter-spacing: -.02em; }
 .big-title-xl { font-size: clamp(3.6rem, 13vw, 13.5rem); }
 
 /* RESULTS */
@@ -368,7 +368,7 @@ html:not(.js) .statement-text .w { opacity: 1; }
 .spec > div { display: grid; grid-template-columns: 8.5rem 1fr; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .spec dt { color: var(--mist); font-size: .875rem; padding-top: 2px; }
 .spec dd { font-weight: 650; font-stretch: 104%; }
-.spec .spec-num { font-family: var(--serif); font-style: italic; color: var(--livery); font-size: 1.6rem; line-height: 1; font-weight: 600; }
+.spec .spec-num { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 11; font-style: italic; color: var(--livery); font-size: 1.6rem; line-height: 1; font-weight: 600; }
 
 .collage {
   position: relative; margin-top: clamp(70px, 10vh, 120px);
@@ -381,7 +381,7 @@ html:not(.js) .statement-text .w { opacity: 1; }
 .ph-1 { grid-column: 1 / 9; grid-row: 1; }
 .ph-2 { grid-column: 10 / 13; grid-row: 1; align-self: end; margin-bottom: -18vh; }
 .collage-quote { grid-column: 2 / 8; grid-row: 2; align-self: center; padding: 10vh 0; }
-.collage-quote p { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.8rem); line-height: 1.15; letter-spacing: -.01em; }
+.collage-quote p { font-family: var(--serif); font-optical-sizing: none; font-variation-settings: "opsz" 9; font-style: italic; font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.8rem); line-height: 1.15; letter-spacing: -.01em; }
 .ph-3 { grid-column: 8 / 12; grid-row: 2; margin-top: 18vh; }
 .ph-4 { grid-column: 1 / 6; grid-row: 3; margin-top: -6vh; }
 .ph-5 { grid-column: 7 / 10; grid-row: 3; margin-top: 14vh; }

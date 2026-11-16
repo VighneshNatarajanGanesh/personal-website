@@ -90,21 +90,53 @@ export function initLap(root, { mobile = false } = {}) {
   const surface = new Mesh(lineGeo(surf), new MeshBasicMaterial({ color: FROST, transparent: true, opacity: 0.035, side: DoubleSide, depthWrite: false }));
   scene.add(surface);
 
-  // kerbs at each corner apex, outside of the turn
+  // kerbs, the way a real circuit lays them out: outside at turn-in, inside at the apex, outside at the exit
   const kerbPos = [], kerbCol = [];
-  MILESTONES.filter(m => !m.finish && m.key !== 'start').forEach(m => {
+  const corners = MILESTONES.filter(m => !m.finish && m.key !== 'start').map(m => {
     const c = Math.round(m.u * M);
-    const turn = new Vector3().crossVectors(T[(c - 6 + M) % M], T[(c + 6) % M]).y; // >0 left turn
-    const side = turn > 0 ? -1 : 1;
-    for (let k = -26; k < 26; k++) {
-      const i = (c + k + M) % M, j = (i + 1) % M;
+    const turn = new Vector3().crossVectors(T[(c - 8 + M) % M], T[(c + 8) % M]).y; // >0: left-hander
+    return { c, inside: turn > 0 ? 1 : -1 }; // +1 = left of travel (+Nrm)
+  });
+  const KS = Math.round(M / 1400 * 26); // kerb half-length in samples
+  const addKerb = (from, to, side) => {
+    for (let k = from; k < to; k++) {
+      const i = ((k % M) + M) % M, j = (i + 1) % M;
       const o = HW * side, o2 = (HW + 0.9) * side;
       const a = P[i].clone().addScaledVector(Nrm[i], o), b = P[i].clone().addScaledVector(Nrm[i], o2);
       const cc = P[j].clone().addScaledVector(Nrm[j], o), d = P[j].clone().addScaledVector(Nrm[j], o2);
-      const col = (Math.floor((k + 26) / 3) % 2) ? FROST : LIVERY;
+      const col = (Math.floor((k - from) / 3) % 2) ? FROST : LIVERY;
       [a, b, cc, b, d, cc].forEach(v => { kerbPos.push(v.x, v.y + 0.02, v.z); kerbCol.push(col.r, col.g, col.b); });
     }
+  };
+  const ENTRY = Math.round(KS * 1.9), EXIT = Math.round(KS * 1.9);
+  corners.forEach(({ c, inside }) => {
+    addKerb(c - ENTRY - KS, c - ENTRY + Math.round(KS * 0.4), -inside); // turn-in: outside
+    addKerb(c - Math.round(KS * 0.55), c + Math.round(KS * 0.55), inside); // apex: inside
+    addKerb(c + EXIT - Math.round(KS * 0.4), c + EXIT + KS, -inside);    // exit: outside
   });
+
+  // out-in-out racing line: lateral offset keyed at entry, apex and exit of every corner
+  const keys = [];
+  corners.forEach(({ c, inside }) => {
+    keys.push([c - ENTRY, -inside * HW * 0.72], [c, inside * HW * 0.82], [c + EXIT, -inside * HW * 0.72]);
+  });
+  keys.sort((x, y) => x[0] - y[0]);
+  const offs = new Float32Array(M + 1);
+  for (let i = 0; i <= M; i++) {
+    let k1 = keys.findIndex(k => k[0] > i); if (k1 < 0) k1 = 0;
+    const k0 = (k1 - 1 + keys.length) % keys.length;
+    let i0 = keys[k0][0], i1 = keys[k1][0];
+    let ii = i;
+    if (i1 <= i0) { i1 += M; if (ii < i0) ii += M; }
+    const t = Math.min(1, Math.max(0, (ii - i0) / Math.max(1, i1 - i0)));
+    const e = t * t * (3 - 2 * t);
+    offs[i] = keys[k0][1] + (keys[k1][1] - keys[k0][1]) * e;
+  }
+  const RL = P.map((p, i) => p.clone().addScaledVector(Nrm[i % M], offs[i % M]));
+  const rlAt = (u, out) => {
+    const f = (((u % 1) + 1) % 1) * M, i = Math.floor(f), t = f - i;
+    return out.copy(RL[i]).lerp(RL[(i + 1) % (M + 1)], t);
+  };
   const kg = new BufferGeometry();
   kg.setAttribute('position', new Float32BufferAttribute(kerbPos, 3));
   kg.setAttribute('color', new Float32BufferAttribute(kerbCol, 3));
@@ -210,7 +242,7 @@ export function initLap(root, { mobile = false } = {}) {
   const trail = new Line(trailGeo, new LineBasicMaterial({ vertexColors: true }));
   scene.add(trail);
   // racing line already driven (sky)
-  const driven = new Line(lineGeo(P), new LineBasicMaterial({ color: SKY, transparent: true, opacity: 0.55 }));
+  const driven = new Line(lineGeo(RL), new LineBasicMaterial({ color: SKY, transparent: true, opacity: 0.6 }));
   driven.position.y = 0.06;
   scene.add(driven);
 
@@ -280,14 +312,14 @@ export function initLap(root, { mobile = false } = {}) {
 
     // driven line + car
     driven.geometry.setDrawRange(0, Math.max(0, Math.floor(lapU * M) + 1));
-    curve.getPointAt(lapU % 1, tmp);
+    rlAt(lapU, tmp);
     car.position.copy(tmp).setY(tmp.y + 0.45);
     car.visible = p > P_LAP0 - 0.01;
     trail.visible = car.visible;
     const tp = trailGeo.attributes.position;
     for (let k = 0; k < TRAIL; k++) {
       const u = lapU - (TRAIL - 1 - k) * 0.0006;
-      curve.getPointAt(((u % 1) + 1) % 1, tmp2);
+      rlAt(u, tmp2);
       tp.setXYZ(k, tmp2.x, tmp2.y + 0.45, tmp2.z);
     }
     tp.needsUpdate = true;
